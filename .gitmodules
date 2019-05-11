@@ -1,0 +1,15 @@
+[submodule "src/modules/ifca-graphql"]
+	path = src/modules/ifca-graphql
+	url = https://github.com/geoyws/ifca-graphql
+[submodule "src/modules/ifca-main"]
+	path = src/modules/ifca-main
+	url = https://github.com/geoyws/ifca-main
+[submodule "src/modules/ifca-db"]
+	path = src/modules/ifca-db
+	url = https://github.com/geoyws/ifca-db
+[submodule "src/modules/ifca-redis"]
+	path = src/modules/ifca-redis
+	url = https://github.com/geoyws/ifca-redis
+[submodule "src/modules/kernel"]
+	path = src/modules/kernel
+	url = https://github.com/geoyws/kernel

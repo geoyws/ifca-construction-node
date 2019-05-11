@@ -1,0 +1,38 @@
+{
+  "name": "ifca-construction-node",
+  "version": "1.0.0",
+  "description": "GraphQL server for IFCA Construction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoyws/ifca-construction-node.git"
+  },
+  "author": "geoyws",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/geoyws/ifca-construction-node/issues"
+  },
+  "homepage": "https://github.com/geoyws/ifca-construction-node#readme",
+  "dependencies": {
+    "@types/graphql": "^14.2.0",
+    "@types/mysql": "^2.15.6",
+    "@types/node": "^12.0.0",
+    "esm": "^3.2.22",
+    "graphql": "^14.3.0",
+    "kernel": "file:src/modules/kernel",
+    "mysql": "^2.17.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true
+  }
+}

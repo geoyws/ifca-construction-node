@@ -1,0 +1,5 @@
+{
+  "runtimeArgs": [
+    "--preserve-symlinks"
+  ]
+}

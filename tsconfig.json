@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "node",
+		"lib": ["dom", "es2018"],
+		"rootDir": "src",
+		"target": "es6",
+		"outDir": "dist",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"typeRoots": [
+				"./node_modules/@types/"
+		],
+	},
+	"exclude": ["node_modules"]
+}
