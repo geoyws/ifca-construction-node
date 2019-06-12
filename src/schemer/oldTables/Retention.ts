@@ -1,5 +1,5 @@
 import { ConstraintMap, DataTypeMap, Schema } from '@IFCASchemer/models';
-import { RetentionBase } from './RetentionBase';
+import { RetentionBase } from '../tables/construction/Retention';
 
 export class Retention extends RetentionBase {
   constructor(schema: Schema) {

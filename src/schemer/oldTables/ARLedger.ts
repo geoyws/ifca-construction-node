@@ -1,17 +1,11 @@
-import Table from '@IFCASchemer/classes/Table';
-import {
-  ColumnMap,
-  ConstraintMap,
-  DataTypeMap,
-  Schema,
-} from '@IFCASchemer/models';
-import { LedgerBase } from './LedgerBase';
+import { LedgerBase } from '../tables/construction/Ledger';
+import { Schema } from '@IFCASchemer/models';
 
-export class APLedger extends LedgerBase {
+export class ARLedger extends LedgerBase {
   constructor(schema: Schema) {
     super();
     this.mergeState({
-      name: `${schema}.APLedger`,
+      name: `${schema}.ARLedger`,
       indexes: [
         'PRIMARY KEY (subscriberId, contractId, subcontractId, status, id)',
         'INDEX secondary (id)',

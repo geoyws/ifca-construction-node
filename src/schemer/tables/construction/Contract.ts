@@ -5,7 +5,7 @@ export class ContractBase extends Table {
   constructor() {
     super();
     this.mergeState({
-      name: 'ContractBase',
+      name: 'ContractBase',./Contract
       columns: [
         ColumnMap.id,
         ColumnMap.subscriberId,
@@ -24,7 +24,7 @@ export class ContractBase extends Table {
         ['CPCIssued', DataTypeMap.ts, [], ''],
         ['completed', DataTypeMap.ts, [], ''],
         ColumnMap.amt,
-        ['retentionRate', DataTypeMap.rate, [ConstraintMap.NN], ''],
+        ['retentionRate', DataTypeMap.pc, [ConstraintMap.NN], ''],
         ['retentionAmt', DataTypeMap.amt, [ConstraintMap.NN], ''],
         ['retentionReleasedAmt', DataTypeMap.amt, [ConstraintMap.NN], ''],
         ['guarantees', DataTypeMap.JSON, [], ''],
@@ -55,3 +55,5 @@ export class ContractBase extends Table {
     });
   }
 }
+
+// @TODO change this to instead be derived from a single class via TypeScript decorators in the source code

@@ -1,5 +1,5 @@
 import { ConstraintMap, DataTypeMap, Schema } from '@IFCASchemer/models';
-import { VOBase } from './VOBase';
+import { VOBase } from '../tables/construction/VO';
 
 export class SCVO extends VOBase {
   constructor(schema: Schema) {
