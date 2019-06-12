@@ -20,15 +20,15 @@
     "@types/graphql": "^14.2.0",
     "@types/mysql": "^2.15.6",
     "@types/node": "^12.0.0",
+    "@types/pg": "^7.4.14",
     "esm": "^3.2.22",
     "graphql": "^14.3.0",
-    "kernel": "file:src/modules/kernel",
-    "mysql": "^2.17.1"
+    "pg": "^7.11.0"
   },
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
-    "semi": false,
+    "semi": true,
     "singleQuote": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true

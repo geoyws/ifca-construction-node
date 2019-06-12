@@ -11,6 +11,14 @@
 		"typeRoots": [
 				"./node_modules/@types/"
 		],
+		"baseUrl": "src",
+		"paths": {
+			"@IFCANodeModules/*": ["modules/ifca-node-modules/src/*"],
+			"@IFCASchemer/*": ["modules/ifca-schemer/src/psql/*"],
+			"@logic/*": ["logic/*"],
+			"@middleware/*": ["middleware/*"],
+			"@models/*": ["models/*"]
+		}
 	},
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules"],
 }
