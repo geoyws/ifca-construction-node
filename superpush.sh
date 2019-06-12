@@ -8,3 +8,5 @@ git submodule foreach git commit -m "$1"
 
 git add -A .
 git commit -m "$1"
+
+git push --recurse-submodules=on-demand
