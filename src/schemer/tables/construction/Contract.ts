@@ -1,40 +1,50 @@
 import Table from '@IFCASchemer/classes/Table';
-import { ColumnMap, ConstraintMap, DataTypeMap } from '@IFCASchemer/models';
+import { columnsMap, constraintsMap, dataTypesMap } from '@IFCASchemer/models';
 
 export class ContractBase extends Table {
   constructor() {
     super();
     this.mergeState({
-      name: 'ContractBase',./Contract
+      name: 'ContractBase',
       columns: [
-        ColumnMap.id,
-        ColumnMap.subscriberId,
+        columnsMap.id,
+        columnsMap.subscriberId,
         [
           'status',
-          DataTypeMap.enum,
-          [ConstraintMap.NN],
+          dataTypesMap.enum,
+          [constraintsMap.notNull],
           '[Active, Inactive, Completed, Terminated, Deleted]',
         ],
-        ['refNo', DataTypeMap.docRef, [], ''],
-        ColumnMap.title,
-        ColumnMap.description,
-        ['awarded', DataTypeMap.ts, [ConstraintMap.NN], ''],
-        ['start', DataTypeMap.ts, [ConstraintMap.NN], ''],
-        ['end', DataTypeMap.ts, [ConstraintMap.NN], ''],
-        ['CPCIssued', DataTypeMap.ts, [], ''],
-        ['completed', DataTypeMap.ts, [], ''],
-        ColumnMap.amt,
-        ['retentionRate', DataTypeMap.pc, [ConstraintMap.NN], ''],
-        ['retentionAmt', DataTypeMap.amt, [ConstraintMap.NN], ''],
-        ['retentionReleasedAmt', DataTypeMap.amt, [ConstraintMap.NN], ''],
-        ['guarantees', DataTypeMap.JSON, [], ''],
+        ['referenceNumber', dataTypesMap.documentReference, [], ''],
+        columnsMap.title,
+        columnsMap.description,
+        ['awarded', dataTypesMap.timestamp, [constraintsMap.notNull], ''],
+        ['start', dataTypesMap.timestamp, [constraintsMap.notNull], ''],
+        ['end', dataTypesMap.timestamp, [constraintsMap.notNull], ''],
+        ['CPCIssued', dataTypesMap.timestamp, [], ''],
+        ['completed', dataTypesMap.timestamp, [], ''],
+        columnsMap.amount,
+        [
+          'retentionRate',
+          dataTypesMap.percentage,
+          [constraintsMap.notNull],
+          '',
+        ],
+        ['retentionAmt', dataTypesMap.amount, [constraintsMap.notNull], ''],
+        [
+          'retentionReleasedAmt',
+          dataTypesMap.amount,
+          [constraintsMap.notNull],
+          '',
+        ],
+        ['guarantees', dataTypesMap.JSON, [], ''],
         [
           'contacts',
-          DataTypeMap.JSON,
+          dataTypesMap.JSON,
           [],
           'ContactId[] // stored on Angular as a set',
         ],
-        ColumnMap.attachments,
+        columnsMap.attachments,
       ],
       indexes: [
         'PRIMARY KEY (subscriberId, status, id)',
