@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 git push origin master
-git push origin ifca
+git push ifca master
 
 cd src/modules/ifca-node-core
 git push origin master
