@@ -8,3 +8,13 @@ git submodule foreach git commit -m "$1"
 
 git add -A .
 git commit -m "$1"
+
+git push origin master
+
+cd src/modules/ifca-node-core
+git push origin master
+
+cd ../ifca-schemer
+git push origin master
+
+cd ../../../
