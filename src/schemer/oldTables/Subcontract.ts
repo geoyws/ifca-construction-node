@@ -1,5 +1,5 @@
 import { ConstraintMap, DataTypeMap, Schema } from '@IFCASchemer/models';
-import { ContractBase } from '../tables/construction/Contract';
+import { ContractBase } from '../tables/CM/Contract';
 
 export class Subcontract extends ContractBase {
   constructor(schema: Schema) {

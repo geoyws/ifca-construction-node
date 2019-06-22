@@ -1,6 +1,6 @@
 {
   "name": "ifca-construction-node",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "GraphQL server for IFCA Construction.",
   "main": "index.js",
   "scripts": {

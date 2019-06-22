@@ -1,11 +1,11 @@
 import Table from '@IFCASchemer/classes/Table';
 import { columnsMap, constraintsMap, dataTypesMap } from '@IFCASchemer/models';
 
-export class ContractBase extends Table {
+export class Contract extends Table {
   constructor() {
     super();
     this.mergeState({
-      name: 'ContractBase',
+      name: 'Contract',
       columns: [
         columnsMap.id,
         columnsMap.subscriberId,
@@ -13,7 +13,7 @@ export class ContractBase extends Table {
           'status',
           dataTypesMap.enum,
           [constraintsMap.notNull],
-          '[Active, Inactive, Completed, Terminated, Deleted]',
+          '',
         ],
         ['referenceNumber', dataTypesMap.documentReference, [], ''],
         columnsMap.title,

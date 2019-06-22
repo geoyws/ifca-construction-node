@@ -1,4 +1,4 @@
-import { ColumnMap, ConstraintMap, DataTypeMap } from '@IFCASchemer/models';
+import { columnsMap, constraintsMap, dataTypesMap } from '@IFCASchemer/models';
 import Table from '@IFCASchemer/classes/Table';
 
 export class RetentionBase extends Table {
@@ -7,20 +7,20 @@ export class RetentionBase extends Table {
     this.mergeState({
       name: 'RetentionBase',
       columns: [
-        ColumnMap.id,
-        ColumnMap.subscriberId,
-        ['contractId', DataTypeMap.id, [ConstraintMap.NN], ''],
+        columnsMap.id,
+        columnsMap.subscriberId,
+        ['contractId', dataTypesMap.id, [constraintsMap.notNull], ''],
         [
           'status',
-          DataTypeMap.enum,
-          [ConstraintMap.NN],
+          dataTypesMap.enum,
+          [constraintsMap.notNull],
           '[Active, Inactive, Completed, Terminated, Deleted]',
         ],
-        ['refNo', DataTypeMap.docRef, [], ''],
-        ColumnMap.description,
-        ['released', DataTypeMap.ts, [], ''],
-        ColumnMap.amt,
-        ColumnMap.attachments,
+        ['refNo', dataTypesMap.docRef, [], ''],
+        columnsMap.description,
+        ['released', dataTypesMap.ts, [], ''],
+        columnsMap.amt,
+        columnsMap.attachments,
       ],
       indexes: [
         'PRIMARY KEY (subscriberId, contractId, status, id)',

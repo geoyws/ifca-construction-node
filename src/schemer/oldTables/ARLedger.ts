@@ -1,4 +1,4 @@
-import { LedgerBase } from '../tables/construction/Ledger';
+import { LedgerBase } from '../tables/CM/Ledger';
 import { Schema } from '@IFCASchemer/models';
 
 export class ARLedger extends LedgerBase {

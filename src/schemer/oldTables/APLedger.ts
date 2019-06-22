@@ -5,7 +5,7 @@ import {
   DataTypeMap,
   Schema,
 } from '@IFCASchemer/models';
-import { LedgerBase } from '../tables/construction/Ledger';
+import { LedgerBase } from '../tables/CM/Ledger';
 
 export class APLedger extends LedgerBase {
   constructor(schema: Schema) {

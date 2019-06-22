@@ -1,6 +1,6 @@
 import Writer from '@IFCASchemer/classes/Writer';
 
-const initCmds = [];
+const initCmds = []; // remember to add addons and enum types
 
 const tables = [];
 

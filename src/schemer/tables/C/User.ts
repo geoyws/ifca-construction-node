@@ -1,22 +1,27 @@
 import Table from '@IFCASchemer/classes/Table';
 import {
-  ColumnMap,
-  ConstraintMap,
-  DataTypeMap,
+  columnsMap,
+  constraintsMap,
+  dataTypesMap,
   Schema,
 } from '@IFCASchemer/models';
 
-export class Account extends Table {
+export class User extends Table {
   constructor(schema: Schema) {
     super();
     this.mergeState({
       name: `${schema}.Account`,
       columns: [
-        ColumnMap.id,
-        ColumnMap.subscriberId,
-        ['status', DataTypeMap.enum, [ConstraintMap.NN], '[Active, Inactive]'],
-        ColumnMap.description,
-        ColumnMap.attachments,
+        columnsMap.id,
+        [
+          'status',
+          dataTypesMap.enum,
+          [constraintsMap.notNull],
+          '[Active, Inactive]',
+        ],
+        ['username', dataTypesMap.text, [constraintsMap.notNull], ''],
+        ['passHash', dataTypesMap.text, [constraintsMap.notNull], ''],
+        ['passSalt', dataTypesMap.text, [constraintsMap.notNull], ''],
       ],
       indexes: [
         'PRIMARY KEY (subscriberId, status, id)',
