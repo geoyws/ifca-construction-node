@@ -2,7 +2,7 @@
 
 git push origin master
 
-cd src/modules/ifca-node-modules
+cd src/modules/ifca-node-core
 git push origin master
 
 cd ../ifca-schemer
