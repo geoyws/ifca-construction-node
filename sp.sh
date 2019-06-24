@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# superpush
+
 git push origin master
 git push ifca master
 

@@ -1,0 +1,6 @@
+[submodule "src/modules/ifca-construction-node"]
+	path = src/modules/ifca-construction-node
+	url = https://p365cloud.visualstudio.com/Construction/_git/ifca-construction-node
+[submodule "src/modules/ifca-schemer"]
+	path = src/modules/ifca-schemer
+	url = https://p365cloud.visualstudio.com/Construction/_git/ifca-schemer

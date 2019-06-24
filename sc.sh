@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# supercommit
+
 if [ -z $1 ]; then
     echo "You need to provide a commit message. Try again."
 fi
